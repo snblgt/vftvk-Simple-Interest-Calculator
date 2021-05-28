@@ -13,17 +13,20 @@ function compute() {
 
     if(principal >0){
     result.innerHTML = "If you deposit <span class='highlight'>"+ principal + "</span> ,<br> at an interest rate of <span class='highlight'>" + rate + "</span>% <br> You will receive an amount of <span class='highlight'>" + interest + "</span>, <br> in the year <span class='highlight'>" + futureyear +"</span> <br><br>" 
+
     }
+
     else{ 
      
     // added validation for principal input box
         alert("Please enter a positive number");
-        return false;
-        principal.focus();
+        document.getElementById("principal").focus();
     }
+
 }
 
-function setSliderLabel() {
+function setSliderLabel(){
     var rate = document.getElementById("rate").value;
     document.getElementById("rate_span").innerHTML = rate + "%";
-}    
+
+}
